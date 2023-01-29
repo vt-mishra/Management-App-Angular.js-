@@ -1,0 +1,55 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1 style="color:aliceblue;">S2P EDUTECH</h1>
+    <div class="d-flex">
+      <button type="button" class="btn btn-primary btn-lg" (click)= "logout()">LOG OUT</button>
+
+    </div>
+  </div>
+</nav><br>
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1 style="color:aliceblue;">Contact List</h1>
+    <div class="d-flex">
+      <button  type="button" class="btn btn-primary btn-lg" (click)= "add()">Add Contact</button>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="row">
+  <div class="col">
+    <table class="table table-success table-striped">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sr No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Your Discription</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ng-star-inserted" *ngFor= "let c of allContacts; let i = index">
+            <th >{{i+1}}</th>
+            <td>{{c.name}}</td>
+            <td>{{c.phone}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.description}}</td>
+            <td>
+              <button type="button" (click)= "edit(c)" class="btn btn-sm btn-primary m-2 ml-2">Edit</button>
+              <button type="button" (click)= "deleteContact(c.id)" class="btn btn-sm btn-danger m-2 ml-2">Delete</button>
+              
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+
+    </table>
+  </div>
+</div>

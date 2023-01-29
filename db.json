@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "Name": "ayush",
+      "Email": "ayu@gmail.com",
+      "Phone": 8777889899,
+      "Discription": "he's a coder"
+    },
+    {
+      "id": 2,
+      "Name": "ayush",
+      "Email": "ayu@gmail.com",
+      "Phone": 988880090,
+      "Discription": "he's a coder"
+    },
+    {
+      "id": 3,
+      "Name": "aman",
+      "Email": "sgu@hgmail.com",
+      "Phone": 989880979,
+      "Discription": "he's a coder"
+    }
+  ]
+}

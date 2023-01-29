@@ -1,0 +1,36 @@
+<form [formGroup]= "contactForm">
+  <div class="card">
+    <nav class="navbar navbar-light bg-primary pb-1">
+
+      <h2 *ngIf= "!this.index" class="text-light m-2">Contact form</h2>
+      <h2 *ngIf= "this.index" class="text-light m-2">update form</h2>
+      <div class="d-flex">
+        <button class="btn btn-warning m-1" routerLink="../contactlist">Back</button>
+      </div>
+    </nav>
+    <div class="mb-3 pt-2">
+      <label class="form-label">Student name</label>
+      <input type="text" placeholder="Student name" class="form-control" formControlName="name"/>
+    </div>
+
+    <div class="mb-3 pt-2">
+      <label class="form-label">phone no.</label>
+      <input type="number" placeholder="1111222333" class="form-control" formControlName="phone"/>
+    </div>
+
+    <div class="mb-3 pt-2">
+      <label class="form-label">Email</label>
+      <input type="text" placeholder="xyz@gmail.com" class="form-control" formControlName="email"/>
+    </div>
+
+    <div class="mb-3 pt-2">
+      <label class="form-label">Description</label>
+      <textarea  class="form-control" formControlName="description" cols="5" rows="2">Text</textarea>
+    </div>
+ <div>
+     <button *ngIf= "!this.index" class="btn btn-primary d-grid gap-2 " (click)= "addContact()">Save</button> 
+     <button *ngIf= "this.index" class="btn btn-primary d-grid gap-2 " (click)= "updatecontact()">update</button> 
+    
+  </div>
+</div>
+</form>
